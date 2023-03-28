@@ -10,6 +10,7 @@
 body {
     background: url(https://images.unsplash.com/photo-1679612422975-34f52049dd3d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80);
     background-size: cover;
+
 }
 
 .darkmode-toggle {
@@ -50,8 +51,20 @@ body {
 }
 
 .home {
+    padding-top: 400px;
+    padding-bottom: 300px;
     width: 400px;
     margin-right: 25rem;
+}
+
+.home a i {
+    position: fixed;
+    bottom: 5px;
+    right: 10px;
+    color: var(--txt-color);
+    padding: 4px;
+    border: 1px solid var(--main-color);
+    border-radius: 0.5rem;
 }
 
 h2 {
@@ -70,9 +83,13 @@ p {
 
 .about {
     position: relative;
-    margin-top: 500px;
+    /* margin-top: 500px; */
     margin-bottom: 200px;
     margin-left: 200px;
+}
+
+.about h2 {
+    padding-top: 300px; 
 }
 
 .about p {
@@ -82,6 +99,7 @@ p {
 .projects {
     display: flex;
     justify-content: space-around;
+    padding: 100px 0;
 }
 
 .card {
@@ -117,3 +135,88 @@ h3 {
     left: 27%;
     top: 2%;
 }
+
+a[href="#projects"] {
+    transition: 2s ease;
+}
+
+a[href="#projects"]:hover .p {
+    display: inline-block;
+    transform: translate(-10px, -8px) rotate(-0.1turn);
+}
+
+a[href="#projects"]:hover .r {
+    display: inline-block;
+    transform: translate(-8px, -8px) rotate(0.05turn);
+}
+
+a[href="#projects"]:hover .o {
+    display: inline-block;
+    transform: translate(-4px, -4px) rotate(0.1turn);
+}
+
+a[href="#projects"]:hover .j {
+    display: inline-block;
+    transform: translate(-4px, 4px) rotate(-0.15turn);
+}
+
+a[href="#projects"]:hover .e {
+    display: inline-block;
+    transform: translate(4px, -4px) rotate(0.1turn);
+}
+
+a[href="#projects"]:hover .c {
+    display: inline-block;
+    transform: translate(6px, -4px) rotate(-0.1turn);
+}
+
+a[href="#projects"]:hover .t {
+    display: inline-block;
+    transform: translate(10px, -6px) rotate(0.1turn);
+}
+
+a[href="#projects"]:hover .s {
+    display: inline-block;
+    transform: translate(10px, -6px) rotate(0.1turn);
+}
+
+
+a[href="#contact"] {
+    transition: 2s ease;
+}
+
+a[href="#contact"]:hover .c {
+    display: inline-block;
+    transform: translate(-10px, -8px) rotate(-0.1turn);
+}
+
+a[href="#contact"]:hover .o {
+    display: inline-block;
+    transform: translate(-8px, -8px) rotate(0.05turn);
+}
+
+a[href="#contact"]:hover .n {
+    display: inline-block;
+    transform: translate(-4px, -4px) rotate(0.1turn);
+}
+
+a[href="#contact"]:hover .t {
+    display: inline-block;
+    transform: translate(-4px, 4px) rotate(-0.15turn);
+}
+
+a[href="#contact"]:hover .a {
+    display: inline-block;
+    transform: translate(4px, -4px) rotate(0.1turn);
+}
+
+a[href="#contact"]:hover .c2 {
+    display: inline-block;
+    transform: translate(6px, -4px) rotate(-0.1turn);
+}
+
+a[href="#contact"]:hover .t2 {
+    display: inline-block;
+    transform: translate(10px, -6px) rotate(0.1turn);
+}
+
