@@ -10,50 +10,129 @@
 </head>
 
 <body>
-    <header class="darkmode-toggle">
-        <i class="fa-solid fa-sun"></i>
-    </header>
-    <div class="top-of-page">
+
+
+    <header class="header">
+        <div class="logo">Portfolio by Kendall S.</div>
+
         <nav class="navbar">
             <a href="#home">Home</a>
             <a href="#about">About</a>
-            <a href="#projects"><span class="p">P</span><span class="r">r</span><span class="o">o</span><span class="j">j</span><span class="e">e</span><span class="c2">c</span><span class="t2">t</span><span class="s">s</span></a>
-            <a href="#contact"><span class="c">C</span><span class="o">o</span><span class="n">n</span><span class="t">t</span><span class="a">a</span><span class="c2">c</span><span class="t2">t</span></a>
+            <a href="#projects"><span class="p">P</span><span class="r">r</span><span class="o">o</span><span
+                    class="j">j</span><span class="e">e</span><span class="c2">c</span><span class="t2">t</span><span
+                    class="s">s</span></a>
+            <a href="#contact"><span class="c">C</span><span class="o">o</span><span class="n">n</span><span
+                    class="t">t</span><span class="a">a</span><span class="c2">c</span><span class="t2">t</span></a>
+            <a class="darkmode-toggle" href="#"><i class="fa-solid fa-sun"></i></a>
         </nav>
+    </header>
 
-        <section class="home" id="home">
+    <section class="home" id="home">
+        <div class="container">
+            <img src="./Assets/images/home1.png" alt="">
+        </div>
+        <div class="wrapper">
             <h2>Welcome, <span>Everyone</span></h2>
             <p>This is my first take on a portfolio to display the skills I currently have in front-end web development.
                 Feel free to purues to your hearts content.</p>
-                <a href="#home"><i class="fa-sharp fa-solid fa-arrow-up"></i></a>
-        </section>
+        </div>
+        <a href="#home"><i class="fa-sharp fa-solid fa-arrow-up"></i></a>
+    </section>
 
-    </div>
+
 
     <section class="about" id="about">
-        <h2>About <span>Me</span></h2>
-        <p>I originally went to college to study health sciences with the intent to medicine. After covid hit, a lot of
-            things change and I lost the passion I had for the field and could no longer study. Now, I've found a new
-            passion for web development and writing code as a whole. I can't wait to find my first job in the field and
-            I plan to take every portfolio I build seriously in order to make that objective a reality.</p>
-
-        <div class="about-img">
-            <img src="" alt="">
+        <div class="background">
+            <div class="wrapper">
+                <h2>About <span>Me</span></h2>
+                <p>I originally went to college to study health sciences with the intent to go into medicine. After
+                    covid
+                    hit, a lot of things changed and I lost the passion I had for the field and could no longer study.
+                    Now,
+                    I've found a
+                    new passion for web development and writing code as a whole. I can't wait to find my first job in
+                    the
+                    field
+                    and I plan to take every portfolio I build seriously in order to make that objective a reality.</p>
+                <br>
+                <p>In my free time I enjoy many outdoor activities. One of my all time favorite things is getting out my
+                    folding kayak and spending the day on a lake. Camping and fishing then go hand in hand.
+                </p>
+            </div>
+            <div class="about-img">
+                <img src="./Assets/images/about.jpg" alt="">
+            </div>
         </div>
     </section>
 
     <section class="projects" id="projects">
-        <div class="card">
-            <div class="container">
-                <img src="./Assets/images/project1.avif" alt="">
-                <h3>First Project</h3>
-                <div class="wrapper">
-                    <div class="content">
+        <h2>My <span>Projects</span></h2>
 
-                    </div>
+        <div class="wrapper">
+            <div class="card">
+                <div class="container">
+                    <h3>Hover Effect</h3>
+                    <a href="https://kendall529.github.io/hover-effect1/"><img src="./Assets/images/project1.jpg"
+                            alt="Grid of squares in 3 columns by 2 rows."></a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="container">
+                    <h3>Photo Scroll</h3>
+                    <a href="https://kendall529.github.io/photo-scroll/"><img src="./Assets/images/project2.png"
+                            alt="Other small pictures that demonstrate a scrolling technique."></a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="container">
+                    <h3>CSS Cheatsheet</h3>
+                    <a href="https://kendall529.github.io/css_cheatsheet/"><img src="./Assets/images/project3.png"
+                            alt="Overview of a webpage with CSS techniques written down."></a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="container">
+                    <h3>Floating Cards</h3>
+                    <a href="https://kendall529.github.io/floating-cards/"><img src="./Assets/images/project4.png"
+                            alt=""></a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="container">
+                    <h3>Dark-Mode Toggle</h3>
+                    <a href="https://kendall529.github.io/dark-mode-toggle/"><img src="./Assets/images/project5.png"
+                            alt="Screen capture of a web development project for dark-mode-toggle"></a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="container">
+                    <h3>Different Portfolio</h3>
+                    <a href="https://kendall529.github.io/followed-portfolio/"><img src="./Assets/images/project6.png"
+                            alt="A portfolio landing page."></a>
                 </div>
             </div>
         </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Contact <span>Me!</span></h2>
+
+        <form action="#">
+            <div class="input">
+                <input type="text" placeholder="First Name">
+                <input type="text" placeholder="Last Name">
+            </div>
+            <div class="input">
+                <input type="email" placeholder="Email Address">
+            </div>
+            <div class="input">
+                <input type="number" placeholder="Phone Number">
+                <input type="text" placeholder="Email Subject">
+            </div>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
+            <input type="submit" value="Send" class="btn">
+        </form>
+
     </section>
 
     <script src="https://kit.fontawesome.com/b89b5e045a.js" crossorigin="anonymous"></script>

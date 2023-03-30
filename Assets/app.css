@@ -1,46 +1,61 @@
 :root {
-    --dark-color: #464F51;
+    --dark-color: #464646;
+    --header: #1b67a3;
+    --box: #292929;
     --light-color: ;
-    --bg-color: #3993DD;
+    --bg-color: #1b67a5;
     --main-color: #9FD8CB;
-    --secondary-color: #FF4000;
-    --txt-color: #D6E5E3;
+    --secondary-color: #ff3700;
+    --txt-color: #f0fffda7;
+    --highlight: #f0fffd99;
+}
+
+* {
+    scroll-behavior: smooth;
+    margin: 0;
+    border: 0;
+
 }
 
 body {
-    background: url(https://images.unsplash.com/photo-1679612422975-34f52049dd3d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80);
-    background-size: cover;
-
+    /* background: url(https://images.unsplash.com/photo-1679612422975-34f52049dd3d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80); */
+    background-color: var(--dark-color);
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
 }
 
 .darkmode-toggle {
-    position: relative;
 }
 
 .darkmode-toggle i {
-    position: absolute;
-    right: 0;
+    color: var(--bg-color);
 }
 
-.top-of-page {
+.header {
+    position: fixed;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    background: var(--header);
+    z-index: 100;
+}
+
+.header .logo {
+    margin-left: 5%;
+    font-size: clamp(2rem, 2.6vw, 3rem);
+    margin-right: auto;
 }
 
 .navbar {
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-end;
-    /* background-color: antiquewhite; */
-    width: 20%;
-    height: 1000px;
+    gap: 2rem;
+    padding: 1rem;
 }
 
 .navbar a {
     text-decoration: none;
-    font-size: 2.3rem;
+    font-size: clamp(1rem, 2.3vw, 2rem);
     color: var(--secondary-color);
     opacity: 0.8;
 }
@@ -51,10 +66,15 @@ body {
 }
 
 .home {
-    padding-top: 400px;
-    padding-bottom: 300px;
+    padding-top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.home .wrapper {
     width: 400px;
-    margin-right: 25rem;
 }
 
 .home a i {
@@ -67,9 +87,23 @@ body {
     border-radius: 0.5rem;
 }
 
+.home .container {
+    max-width: 400px;
+    background: var(--bg-color);
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10%;
+}
+
+.home img {
+    max-width: 100%;
+    transform: translate(0, 5px);
+}
+
 h2 {
     color: var(--txt-color);
     font-size: 2.6rem;
+    font-size: clamp(2rem, 4vw, 2.6rem);
 }
 
 h2 > span {
@@ -79,46 +113,112 @@ h2 > span {
 p {
     color: var(--bg-color);
     font-size: 1.6rem;
+    font-size: clamp(1rem, 3vw, 1.6rem);
 }
 
 .about {
-    position: relative;
+    width: 100%;
+    /* position: relative; */
     /* margin-top: 500px; */
-    margin-bottom: 200px;
-    margin-left: 200px;
+    margin-bottom: 10%;
+
+}
+
+.about .background {
+    position: relative;
+    margin-left: 10%;
+    background-color: var(--box);
+    width: 80%;
+    height: calc(100vh -30px);
+    padding: 20vh 0;
+}
+
+.about .wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    padding-bottom: 5rem;
 }
 
 .about h2 {
-    padding-top: 300px; 
+    padding-top: 100px; 
 }
 
 .about p {
-    width: 500px;
+    max-width: 500px;
+}
+
+.about img {
+    width: clamp(200px, 30vw, 600px);
+    /* right: 0; */
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.btn {
+    font-size: clamp(1rem, 2vw, 2rem);
+    width: 10rem;
+    height: 3rem;
+    border-radius: 4px;
+    color: var(--txt-color);
+    background-color: var(--secondary-color);
+    transition: 0.5s ease;
+}
+
+.btn:hover {
+    background-color: var(--txt-color);
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
 }
 
 .projects {
+    padding-top: 200px;
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     padding: 100px 0;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
-.card {
-    margin-bottom: 10rem;
+.projects h2 {
+    margin: 1rem;
 }
 
-.container {
+.projects .wrapper {
+    padding-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    max-width: 1600px;
+}
+
+.projects .container {
     position: relative;
-    width: 25rem;
-    height: 30rem;
-    border: 2px solid hotpink;
-    border-radius: 3rem;
+    width: clamp(300px, 30vw, 500px);
+    border: 2px solid rgb(112, 102, 107);
+    border-radius: 2rem;
     overflow: hidden;
+    
+}
+
+.projects .container:hover {
+    box-shadow: 0.1rem 0.3rem 10px var(--highlight);
 }
 
 .container img {
-    width: 400px;
-    /* overflow: hidden; */
+    /* margin: 1rem; */
+    width: clamp(300px, 30vw, 500px);
+    overflow: hidden;
     transition: 0.3s ease;
+    object-fit: cover;
+    object-position: center;
+    transform: translate(0, 2px);
+    scale: 1.02
 }
 
 .container:hover img {
@@ -129,94 +229,185 @@ h3 {
     font-size: 2.2rem;
 }
 
-.container h3 {
+.projects .container h3 {
     position: absolute;
-    color: var(--secondary-color);
-    left: 27%;
-    top: 2%;
+    color: var(--txt-color);
+    left: 28%;
+    top: 0;
+    opacity: 0.8;
+    z-index: 20;
 }
 
-a[href="#projects"] {
-    transition: 2s ease;
+/* Codehal YT Referencing*/
+
+.contact h2 {
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
 }
+
+.contact form {
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact form .input {
+    display: flex;
+    justify-self: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input input, 
+.contact form textarea {
+    width: 94%;
+    padding: 1.3rem;
+    font-size: 1.5rem;
+    color: var(--txt-color);
+    background-color: var(--box);
+    box-shadow: 0 0.1rem 0.5rem var(--highlight);
+    border-radius: 0.8rem;
+    margin: 0.8rem;
+}
+
+.contact form .input input {
+    width: 44%;
+}
+
+.contact form textarea {
+    resize: none;
+    margin-bottom: 3rem;
+}
+
+.contact form .btn {
+    cursor: pointer;
+}
+
+
+/* a[href="#projects"] {
+    transition: 2s ease;
+} */
 
 a[href="#projects"]:hover .p {
     display: inline-block;
     transform: translate(-10px, -8px) rotate(-0.1turn);
+    transition: 1s ease;
 }
 
 a[href="#projects"]:hover .r {
     display: inline-block;
     transform: translate(-8px, -8px) rotate(0.05turn);
+    transition: 1s ease;
 }
 
 a[href="#projects"]:hover .o {
     display: inline-block;
     transform: translate(-4px, -4px) rotate(0.1turn);
+    transition: 1s ease;
 }
 
 a[href="#projects"]:hover .j {
     display: inline-block;
     transform: translate(-4px, 4px) rotate(-0.15turn);
+    transition: 1s ease;
 }
 
 a[href="#projects"]:hover .e {
     display: inline-block;
     transform: translate(4px, -4px) rotate(0.1turn);
+    transition: 1s ease;
 }
 
-a[href="#projects"]:hover .c {
+a[href="#projects"]:hover .c2 {
     display: inline-block;
     transform: translate(6px, -4px) rotate(-0.1turn);
+    transition: 1s ease;
 }
 
-a[href="#projects"]:hover .t {
+a[href="#projects"]:hover .t2 {
     display: inline-block;
     transform: translate(10px, -6px) rotate(0.1turn);
+    transition: 1s ease;
 }
 
 a[href="#projects"]:hover .s {
     display: inline-block;
     transform: translate(10px, -6px) rotate(0.1turn);
+    transition: 1s ease;
 }
 
 
-a[href="#contact"] {
+/* a[href="#contact"] {
     transition: 2s ease;
-}
+} */
 
 a[href="#contact"]:hover .c {
     display: inline-block;
     transform: translate(-10px, -8px) rotate(-0.1turn);
+    transition: 1s ease;
 }
 
 a[href="#contact"]:hover .o {
     display: inline-block;
     transform: translate(-8px, -8px) rotate(0.05turn);
+    transition: 1s ease;
 }
 
 a[href="#contact"]:hover .n {
     display: inline-block;
     transform: translate(-4px, -4px) rotate(0.1turn);
+    transition: 1s ease;
 }
 
 a[href="#contact"]:hover .t {
     display: inline-block;
     transform: translate(-4px, 4px) rotate(-0.15turn);
+    transition: 1s ease;
 }
 
 a[href="#contact"]:hover .a {
     display: inline-block;
     transform: translate(4px, -4px) rotate(0.1turn);
+    transition: 1s ease;
 }
 
 a[href="#contact"]:hover .c2 {
     display: inline-block;
     transform: translate(6px, -4px) rotate(-0.1turn);
+    transition: 1s ease;
 }
 
 a[href="#contact"]:hover .t2 {
     display: inline-block;
     transform: translate(10px, -6px) rotate(0.1turn);
+    transition: 1s ease;
 }
 
+@media screen and (max-width: 795px) {
+    .header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .header .navbar {
+        max-width: 390px;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0.8rem;
+    }
+
+    .home {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .about {
+        display: flex;
+        justify-content: center;
+    }
+
+
+}
